@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 abstract class Asset {
-    String descriptor;
+    String descriptor; 
     String date;
     double currentValue;
 
