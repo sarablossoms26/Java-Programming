@@ -1,12 +1,11 @@
 import java.util.*;
 
-// Interface Mango
+
 interface Mango {
     void taste();
     void season();
 }
 
-// Class Winter implementing Mango
 class Winter implements Mango {
 
     public void taste() {
@@ -18,7 +17,6 @@ class Winter implements Mango {
     }
 }
 
-// Class Summer implementing Mango
 class Summer implements Mango {
 
     public void taste() {
@@ -30,7 +28,6 @@ class Summer implements Mango {
     }
 }
 
-// Driver Class
 public class Main {
     public static void main(String[] args) {
 
