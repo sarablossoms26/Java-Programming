@@ -1,55 +1,75 @@
-// Interface
+import java.util.*;
+
+// Gross Interface
 interface Gross {
     double calculateGross();
 }
 
-// Base class
+// Employee Class (Base Class)
 class Employee {
-    String name;
+    String empName;
     int empId;
-    double basicSalary;
 
-    Employee(String name, int empId, double basicSalary) {
-        this.name = name;
-        this.empId = empId;
-        this.basicSalary = basicSalary;
+    void getEmployeeData(Scanner sc) {
+        System.out.print("Enter Employee Name: ");
+        empName = sc.nextLine();
+
+        System.out.print("Enter Employee ID: ");
+        empId = sc.nextInt();
+        sc.nextLine();
     }
 
     void displayEmployee() {
+        System.out.println("Employee Name: " + empName);
         System.out.println("Employee ID: " + empId);
-        System.out.println("Name: " + name);
-        System.out.println("Basic Salary: " + basicSalary);
     }
 }
 
-// Child class
+// Salary Class (Derived Class)
 class Salary extends Employee implements Gross {
-    double hra;
-    double da;
+    double basic, hra, da;
 
-    Salary(String name, int empId, double basicSalary, double hra, double da) {
-        super(name, empId, basicSalary);
-        this.hra = hra;
-        this.da = da;
+    void getSalaryData(Scanner sc) {
+        System.out.print("Enter Basic Salary: ");
+        basic = sc.nextDouble();
+
+        System.out.print("Enter HRA: ");
+        hra = sc.nextDouble();
+
+        System.out.print("Enter DA: ");
+        da = sc.nextDouble();
     }
 
-    // Implementing interface method
+    // Implement Gross Interface
     public double calculateGross() {
-        return basicSalary + hra + da;
+        return basic + hra + da;
     }
 
     void displaySalary() {
-        displayEmployee();
+        System.out.println("Basic Salary: " + basic);
         System.out.println("HRA: " + hra);
         System.out.println("DA: " + da);
         System.out.println("Gross Salary: " + calculateGross());
     }
 }
 
-// Main class
-public class Gross {
+// Driver Class
+public class Main {
     public static void main(String[] args) {
-        Salary emp = new Salary("Rahul", 101, 30000, 5000, 3000);
-        emp.displaySalary();
+        Scanner sc = new Scanner(System.in);
+
+        Salary s = new Salary();
+
+        System.out.println("Enter Employee Details:");
+        s.getEmployeeData(sc);
+
+        System.out.println("\nEnter Salary Details:");
+        s.getSalaryData(sc);
+
+        System.out.println("\n--- Employee Salary Details ---");
+        s.displayEmployee();
+        s.displaySalary();
+
+        sc.close();
     }
 }
