@@ -1,13 +1,13 @@
 import java.util.*;
 
-// Bank Interface
+e
 interface Bank {
     String bankName = "State Bank";
 
     void displayBank();
 }
 
-// Customer Class (Base Class)
+
 class Customer {
     String custName;
     int custId;
@@ -27,7 +27,7 @@ class Customer {
     }
 }
 
-// Account Class (Derived Class)
+
 class Account extends Customer implements Bank {
     int accNo;
     double balance;
@@ -46,13 +46,13 @@ class Account extends Customer implements Bank {
         System.out.println("Balance: " + balance);
     }
 
-    // Implement Bank interface method
+    
     public void displayBank() {
         System.out.println("Bank Name: " + bankName);
     }
 }
 
-// Driver Class
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
