@@ -4,7 +4,7 @@ class Commission {
     String name;
     double sales, commission;
 
-    Commission(String n, double s) {
+    Commission(String n, double s) { 
         name = n;
         sales = s;
     }
