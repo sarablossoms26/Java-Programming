@@ -8,7 +8,7 @@ abstract class MotorVehicle {
     MotorVehicle(String modelName, int modelNumber, double modelPrice) {
         this.modelName = modelName;
         this.modelNumber = modelNumber;
-        this.modelPrice = modelPrice;
+        this.modelPrice = modelPrice; 
     }
 
     abstract void display();
