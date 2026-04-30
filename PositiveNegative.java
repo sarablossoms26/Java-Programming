@@ -1,7 +1,7 @@
 public class PositiveNegative {
     int num;
 
-    void check() {
+    void check() { 
         if (num > 0)
             System.out.println(num + " is positive");
         else if (num < 0)
