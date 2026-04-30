@@ -1,6 +1,6 @@
 public class FileSeven {
    int n;
-   void print(){
+   void print(){ 
     int a=0 ,b=1 ,c;
     System.out.print("fibomanacci series:" +a+""+b);
     for(int i= 2;i<n;i++){
