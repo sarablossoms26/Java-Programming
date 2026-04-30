@@ -6,7 +6,7 @@ public class Main {
         System.out.print("Enter string: ");
         String str = sc.nextLine();
 
-        String result = "";
+        String result = ""; 
 
         for (char ch : str.toCharArray()) {
             if (Character.isUpperCase(ch))
