@@ -4,7 +4,7 @@ class Item {
     int code;
     double price;
 
-    void input() {
+    void input() { 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter code: ");
         code = sc.nextInt();
