@@ -1,7 +1,7 @@
 public class FileTwo {
     int a,b,c;
     void max(){
-        if(a > b && a > c)
+        if(a > b && a > c) 
             System.out.println("maximum is " + a);
         else if(b > a && b > c)
             System.out.println("maximum is " + b);
