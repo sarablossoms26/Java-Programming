@@ -2,7 +2,7 @@ class Student {
     String name;
     int age;
 
-    Student() {
+    Student() { 
         name = "Unknown";
         age = 0;
     }
