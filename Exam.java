@@ -1,11 +1,9 @@
 import java.util.*;
 
-// Interface
 interface Exam {
     void percent_cal();
 }
 
-// Student Class
 class Student {
     String name;
     int roll_no;
@@ -33,11 +31,9 @@ class Student {
     }
 }
 
-// Result Class
 class Result extends Student implements Exam {
     double per;
 
-    // Implement interface method
     public void percent_cal() {
         per = (marks1 + marks2) / 2.0;
     }
@@ -47,19 +43,18 @@ class Result extends Student implements Exam {
     }
 }
 
-// Driver Class
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         Result r = new Result();
 
-        r.getData(sc);      // input
-        r.percent_cal();   // calculate %
+        r.getData(sc);     
+        r.percent_cal();   
         
         System.out.println("\n--- Student Details ---");
-        r.show();          // display student info
-        r.display();       // display percentage
+        r.show();         
+        r.display();       
 
         sc.close();
     }
