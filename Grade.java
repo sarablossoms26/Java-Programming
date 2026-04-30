@@ -1,5 +1,5 @@
 public class FileFive {
-  int percent;
+  int percent; 
     void grade(){
         if(percent>= 90)
             System.out.println("GRADE:A");
