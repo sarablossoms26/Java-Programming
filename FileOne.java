@@ -1,4 +1,4 @@
-public class FileOne {
+public class PositiveNegative {
     int num;
 
     void check() {
@@ -10,7 +10,7 @@ public class FileOne {
             System.out.println("number is zero");
     }
     public static void main(String[] args) {
-        FileOne obj = new FileOne();
+        PositiveNegative obj = new PositiveNegative ();
         obj.num = -23;
         obj.check();
     }
