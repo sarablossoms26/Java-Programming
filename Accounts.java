@@ -4,7 +4,7 @@ abstract class Accounts {
     double balance;
     int accountNumber;
     String accountHoldersName;
-    String address;
+    String address; 
 
     Accounts(double balance, int accountNumber, String accountHoldersName, String address) {
         this.balance = balance;
