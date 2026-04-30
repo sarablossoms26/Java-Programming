@@ -1,41 +1,33 @@
 import java.util.*;
 
-// Interface 1
 interface SalesDepartment {
     void processSale(double amount);
 }
 
-// Interface 2
 interface HRDepartment {
     void conductTraining(String employeeName);
 }
 
-// Interface 3
 interface FinanceDepartment {
     void generateInvoice(double amount);
 }
 
-// Class implementing multiple interfaces
 class Company implements SalesDepartment, HRDepartment, FinanceDepartment {
 
-    // Implement SalesDepartment
     public void processSale(double amount) {
         System.out.println("Sale Amount: " + amount);
         System.out.println("Sale processed successfully!");
     }
 
-    // Implement HRDepartment
     public void conductTraining(String employeeName) {
         System.out.println("Training conducted for: " + employeeName);
     }
 
-    // Implement FinanceDepartment
     public void generateInvoice(double amount) {
         System.out.println("Invoice generated for amount: " + amount);
     }
 }
 
-// Driver Class
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
