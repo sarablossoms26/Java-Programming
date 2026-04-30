@@ -3,7 +3,7 @@ import java.util.Scanner;
 class BankAccount {
     String name;
     int accNo;
-    double balance;
+    double balance; 
 
     BankAccount(String name, int accNo, double balance) {
         this.name = name;
