@@ -1,6 +1,5 @@
 import java.util.*;
 
-// Department Interface
 interface Department {
     String deptName = "";
     String deptHead = "";
@@ -8,7 +7,6 @@ interface Department {
     void printDeptData();
 }
 
-// Hostel Class
 class Hostel {
     String hostelName;
     String hostelLocation;
@@ -23,7 +21,7 @@ class Hostel {
 
         System.out.print("Enter Number of Rooms: ");
         numberOfRooms = sc.nextInt();
-        sc.nextLine(); // clear buffer
+        sc.nextLine(); 
     }
 
     void printHostelData() {
@@ -33,14 +31,12 @@ class Hostel {
     }
 }
 
-// Student Class
 class Student extends Hostel implements Department {
     String studentName;
     int regdNo;
     String electiveSubject;
     double avgMarks;
 
-    // Department details (must define separately)
     String deptName;
     String deptHead;
 
@@ -65,7 +61,6 @@ class Student extends Hostel implements Department {
         System.out.print("Enter Department Head: ");
         deptHead = sc.nextLine();
 
-        // Hostel data
         getHostelData(sc);
     }
 
@@ -80,14 +75,12 @@ class Student extends Hostel implements Department {
         printHostelData();
     }
 
-    // Implementing Department method
     public void printDeptData() {
         System.out.println("Department Name: " + deptName);
         System.out.println("Department Head: " + deptHead);
     }
 }
 
-// Driver Class
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
