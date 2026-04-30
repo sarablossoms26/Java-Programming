@@ -1,11 +1,9 @@
 import java.util.*;
-
-// Gross Interface
+e
 interface Gross {
     double calculateGross();
 }
 
-// Employee Class (Base Class)
 class Employee {
     String empName;
     int empId;
@@ -25,7 +23,6 @@ class Employee {
     }
 }
 
-// Salary Class (Derived Class)
 class Salary extends Employee implements Gross {
     double basic, hra, da;
 
@@ -40,7 +37,6 @@ class Salary extends Employee implements Gross {
         da = sc.nextDouble();
     }
 
-    // Implement Gross Interface
     public double calculateGross() {
         return basic + hra + da;
     }
@@ -53,7 +49,6 @@ class Salary extends Employee implements Gross {
     }
 }
 
-// Driver Class
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
