@@ -4,7 +4,7 @@ class MergeSortedArrays {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter size of first array: ");
+        System.out.print("Enter size of first array: "); 
         int n1 = sc.nextInt();
         int a[] = new int[n1];
 
