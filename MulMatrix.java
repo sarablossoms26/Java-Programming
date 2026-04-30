@@ -12,7 +12,7 @@ public class MatrixMultiplication {
         
         System.out.print("Enter rows of second matrix: ");
         int r2 = sc.nextInt();
-        System.out.print("Enter rows of second matrix: ");
+        System.out.print("Enter rows of second matrix: "); 
         int c2 = sc.nextInt();
 
         
