@@ -10,7 +10,7 @@ class Tender {
         company = sc.nextLine();
         System.out.print("Enter cost: ");
         cost = sc.nextDouble();
-        sc.nextLine(); // clear buffer
+        sc.nextLine();
     }
 }
 
