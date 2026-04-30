@@ -7,7 +7,7 @@ public class Main {
         String str = sc.nextLine();
 
         String result = str.replace('d', 'f');
-
+ 
         System.out.println("Modified string: " + result);
     }
 }
