@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+ 
 abstract class AbstractProduct {
     int productId;
     String name;
