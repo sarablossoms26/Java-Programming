@@ -1,41 +1,75 @@
-import java.util.Scanner ;
-import jdk.jshell.SourceCodeAnalysis;
+import java.util.*;
+
+// Bank Interface
 interface Bank {
-    String bank_name = "State Bank of India" ;
-    void showBankDetails();
+    String bankName = "State Bank";
+
+    void displayBank();
 }
+
+// Customer Class (Base Class)
 class Customer {
-    String customer_name;
-    int acc_number;
-    void coustomerdetails (String name,int acc){
-        customer_name = name;
-        acc_number = acc;
+    String custName;
+    int custId;
+
+    void getCustomerData(Scanner sc) {
+        System.out.print("Enter Customer Name: ");
+        custName = sc.nextLine();
+
+        System.out.print("Enter Customer ID: ");
+        custId = sc.nextInt();
+        sc.nextLine();
+    }
+
+    void displayCustomer() {
+        System.out.println("Customer Name: " + custName);
+        System.out.println("Customer ID: " + custId);
     }
 }
-class Account extends Customer implements Bank{
+
+// Account Class (Derived Class)
+class Account extends Customer implements Bank {
+    int accNo;
     double balance;
 
-    public Account(double balance) {
-        this.balance = balance;
+    void getAccountData(Scanner sc) {
+        System.out.print("Enter Account Number: ");
+        accNo = sc.nextInt();
+
+        System.out.print("Enter Balance: ");
+        balance = sc.nextDouble();
+        sc.nextLine();
     }
-    void showBankDetails(){
-        System.out.println("Bank Name:"+ bank_name );
+
+    void displayAccount() {
+        System.out.println("Account Number: " + accNo);
+        System.out.println("Balance: " + balance);
     }
-    void deposit (double amount) {
-        balance += amount;
-        System.out.println("Deposited:" + amount);
+
+    // Implement Bank interface method
+    public void displayBank() {
+        System.out.println("Bank Name: " + bankName);
     }
-    void withdraw (double amount) {
-        if (amount <= balance){
-            balance -= amount;
-            System.out.println("Withdrawn:" + amount );
-        }
-        else{
-            System.out.println("Insufficient Amount!");
-        }
-    }
-    void display(){
-        System.out.println("ACCOUNT DETAILS");
-        System.out.println();
+}
+
+// Driver Class
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Account obj = new Account();
+
+        System.out.println("Enter Customer Details:");
+        obj.getCustomerData(sc);
+
+        System.out.println("\nEnter Account Details:");
+        obj.getAccountData(sc);
+
+        System.out.println("\n--- Details ---");
+        obj.displayBank();
+        obj.displayCustomer();
+        obj.displayAccount();
+
+        sc.close();
     }
 }
